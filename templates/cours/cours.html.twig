@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cours{% endblock %}
+
+{% block cours %}
+    <section id="cours">
+        <div class="container cours">
+            <div class="title-cours">
+                <h2>Nos Cours</h2>
+                <p>Apprenez a votre rythme avec nos cours en ligne</p>
+            </div>
+            <div class="cards-cours">
+                <div class="card-cours">
+                    <div class="img-card-cours">
+                        <img class="img-card" src="{{asset('assets/img/maths.jpeg')}}" alt="photo de la personne">
+                    </div>
+                    <div class="body-card-cours">
+                        <span>mathematiques</span>
+                        <p>Explorez les concepts fondamentaux et avances des mathematiques et devenez un maitre des nombres.</p>
+                        <div class="cta-container">
+                            <a class="cta" href="{{path('ressources')}}">demarrer l'apprentissage</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-cours">
+                    <div class="img-card-cours">
+                        <img class="img-card" src="{{asset('assets/img/science.jpeg')}}" alt="photo de la personne">
+                    </div>
+                    <div class="body-card-cours">
+                        <span>sciences</span>
+                        <p>Decouvrez les mysteres de l'univers, de la biologie moleculaire a la physique quqntique.</p>
+                        <div class="cta-container">
+                            <a class="cta" href="{{path('ressources')}}">demarrer l'apprentissage</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-cours">
+                    <div class="img-card-cours">
+                        <img class="img-card" src="{{asset('assets/img/literature.jpeg')}}" alt="photo de la personne">
+                    </div>
+                    <div class="body-card-cours">
+                        <span>litterature</span>
+                        <p>Parcourez les oeuvres des plus grands auteurs, poetes, et dramaturges de l'histoire.</p>
+                        <div class="cta-container">
+                            <a class="cta" href="{{path('ressources')}}">demarrer l'apprentissage</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

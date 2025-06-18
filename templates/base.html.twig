@@ -4,14 +4,59 @@
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+        <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 
         {% block javascripts %}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <header>
+            <nav>
+                <div class="logo-container">
+                    <img src="{{asset('assets/img/Logo.png')}}" alt="logo">
+                </div>
+                <ul class="nav-list">
+                    <li><a href="{{path('home')}}">accueil</a></li>
+                    <li><a href="{{path('cours')}}">cours</a></li>
+                    <li><a href="{{path('ressources')}}">ressources</a></li>
+                    <li><a href="{{path('contact')}}">contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        {% block main %}
+            {% block banner %}
+                <section id="banner">
+                    <div class="banner-container banner">
+                        <div class="title-banner">
+                            <h1>bienvenue sur kids learning</h1>
+                        </div>
+                        <div class="cta-container">
+                            <a class="cta" href="{{path('ressources')}}">decouvrir</a>
+                        </div>
+                    </div>
+                </section>
+            {% endblock %}
+            {% block home %}
+            {% endblock %}
+            {% block cours %}
+            {% endblock %}
+        {% endblock %}
+        <footer>
+            <div class="footer-container">
+                <div class="logo-container-footer">
+                    <img src="{{asset('assets/img/Logo.png')}}" alt="logo">
+                </div>
+                <ul class="footer-content">
+                    <li>Nous sommes ici pour repondre a vos questions et inquietudes.</li>
+                    <li><a href="mailto:info@kids-learning.fr">info@kids-learning.fr</a></li>
+                    <li>01 23 45 67 89</li>
+                    <li><a href="{{path('contact')}}">Formulaire de contact</a></li>
+                </ul>
+                <div class="footer-copyright">
+                    <p>&copy; 2023 kids learning. tous droits reserves.</p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

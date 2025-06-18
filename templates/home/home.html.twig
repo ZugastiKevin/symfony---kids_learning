@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block home %}
+    <section id="time">
+        <div class="time">
+            <div class="time">
+                <p>Aujourd'hui on est le {{"now"|date("m/d/Y")}}</p>
+            </div>
+        </div>
+    </section>
+    <section id="home">
+        <div class="container home">
+            <div class="title-home">
+                <h2>Temoignages</h2>
+                <p>Decouvrez ce que les gens disent de notre platforme</p>
+            </div>
+            <div class="cards-home">
+                <div class="card-home">
+                    <div class="img-card-home">
+                        <img class="img-card" src="{{asset('assets/img/parent-1.jpeg')}}" alt="photo de la personne">
+                    </div>
+                    <div class="body-card-home">
+                        <p>"Ma fille a beaucoup appris grace a cette platforme. Les cours sont tres informatifs et faciles a comprendre."</p>
+                        <span>-therese dupont</span>
+                    </div>
+                </div>
+                <div class="card-home">
+                    <div class="img-card-home">
+                        <img class="img-card" src="{{asset('assets/img/parent-2.jpeg')}}" alt="photo de la personne">
+                    </div>
+                    <div class="body-card-home">
+                        <p>"Une excellente ressource pour l'apprentissage en ligne. Je la recommande a tout le monde!"</p>
+                        <span>-jean curie</span>
+                    </div>
+                </div>
+                <div class="card-home">
+                    <div class="img-card-home">
+                        <img class="img-card" src="{{asset('assets/img/parent-3.jpeg')}}" alt="photo de la personne">
+                    </div>
+                    <div class="body-card-home">
+                        <p>"Les ressources disponibles sont tres utiles et variees. Une platforme indispensable pour l'education."</p>
+                        <span>-albert dorne</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
